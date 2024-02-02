@@ -1,0 +1,73 @@
+Casting:
+ 
+ 
+Converting from one data type to another datatype is called as Casting
+ 
+Type of Casting
+ 
+1)Primitive
+2)Derived
+ 
+Primitive:
+widening:converting lower datatype to higher datatype 
+Narrowing:converting higher datatype to lower datatype
+ 
+Narrowing:
+ 
+ 
+double x=2.34;
+int y;
+Y=(int)x;
+S.O.P 2
+ 
+ 
+----------------------------
+Widening:
+int x=2
+double y
+ 
+ 
+double y=x
+ 
+y=x
+ 
+2.00
+ 
+
+---------------------------------
+UPCASTING:
+converting subclass object to super class object are called as Upcasting(using upcasting we can call super class properties directly)
+ 
+ClassA
+{
+public void test()
+{
+S.O.P(Super test)
+}
+public void test1()
+{
+S.O.P(Super test1)
+}
+}
+ 
+Class ClassB
+{
+ 
+public void test1()
+{
+S.O.P(Super test1)
+}
+ 
+ 
+}
+ 
+Main class
+classA ref=new ClassB();
+             ClassB ref1=(ClassB)ref
+ref.test();
+ref.test1();
+ 
+--------------------------
+ 
+Downcasting:
+Converting upcasted ref variable to subclass object is called as Downcasting

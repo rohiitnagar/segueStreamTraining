@@ -1,0 +1,117 @@
+SELECT dname from dept
+WHERE deptin IN (select deptin from emp
+WHERE job NOT IN ANALYST and HR
+
+--------------------------------------
+
+SELECT job FROM emp e
+INNER JOIN dept d ON e.deptin = d.deptid
+WHERE job NOT IN ANALYST and HR
+
+
+-----------------------------------------
+
+SELECT EMpname,saalry from emp
+WHERE deptID = (select deptid from emp 
+WHERE name like L% AND salary = (select max(salary) from emp)AND location = sele)
+-----
+SEKECT empname , saalry from emp e
+INNER JOIN dept d ON e.deptid = d.deptid
+WHERE  name = L% and saalry = max(saalry)
+
+------------------------
+1)  SELECT ord_no , purch_amt , ord_date , customer_id , salesman_id FROM Orders
+WHERE salesman_id = (SELECT salesman_id from Salesman 
+WHERE name =  'Paul Adam')
+ -----
+ SELECT o.ord_no , o.purch_amt , o.ord_date , o.customer_id , o.salesman_id FROM Orders o
+INNER JOIN Salesman s
+ON o.salesman_id = s.salesman_id
+WHERE s.name = 'Paul Adam'
+
+2)  SELECT o.ord_no , o.purch_amt , o.ord_date , o.customer_id , o.salesman_id FROM Orders o
+INNER JOIN Salesman s
+ON o.salesman_id = s.salesman_id
+WHERE s.city = 'London'
+-------
+SELECT ord_no , purch_amt , ord_date , customer_id , salesman_id FROM Orders
+WHERE salesman_id = (SELECT salesman_id from Salesman 
+WHERE city =  'London')
+
+3) SELECT ord_no , purch_amt , ord_date , customer_id , salesman_id FROM Orders
+WHERE customer_id =  3007
+--------
+
+
+4) SELECT ord_no , purch_amt , ord_date , customer_id , salesman_id FROM Orders
+WHERE purch_amt> (Select avg(purch_amt) FROM Orders WHERE ord_date = '10/10/2012')
+
+
+5) SELECT ord_no , purch_amt , ord_date , customer_id , salesman_id FROM Orders
+WHERE salesman_id = (SELECT salesman_id from Salesman 
+WHERE city =  'New York')
+----
+SELECT o.ord_no , o.purch_amt , o.ord_date , o.customer_id , o.salesman_id FROM Orders o
+INNER JOIN Salesman s
+ON o.salesman_id = s.salesman_id
+WHERE s.city = 'New York'
+
+6) SELECT commission
+FROM salesman
+WHERE salesman_id IN
+    (SELECT salesman_id 
+     FROM customer
+     WHERE city = 'Paris');
+-------
+Select s.commission from Salesman s
+INNER JOIN Customer c ON s.salesman_id = c.salesman_id
+WHERE c.city = 'Paris'
+
+7) SELECT *
+FROM customer
+WHERE customer_id =
+    (SELECT salesman_id -2001
+     FROM salesman
+     WHERE name = 'Mc Lyon');
+
+
+8) ELECT grade, COUNT (*)
+FROM customer
+GROUP BY grade
+HAVING grade >
+    (SELECT AVG(grade)
+     FROM customer
+     WHERE city = 'New York');
+
+9) SELECT ord_no, purch_amt, ord_date, salesman_id 
+FROM orders 
+WHERE salesman_id IN(
+SELECT salesman_id 
+FROM salesman
+WHERE commission = (
+SELECT MAX(commission) 
+FROM salesman));
+
+----------------------
+
+SELECT SUBSTRING('SQL Tutorial', 1, 3) AS ExtractString;
+------------
+CREATE TABLE Bonus (
+	WORKER_REF_ID INT,
+	BONUS_AMOUNT INT,
+	BONUS_DATE DATETIME,
+	FOREIGN KEY (WORKER_REF_ID)
+		REFERENCES Worker(WORKER_ID)
+        ON DELETE CASCADE
+);
+
+
+
+
+
+
+
+
+
+
+

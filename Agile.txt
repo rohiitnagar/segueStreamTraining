@@ -1,0 +1,24 @@
+What is User Story
+- General explanation of a software feature written from the perspective of the end user
+
+What is Sprint
+-period of time in which a team works to complete a task
+
+What is Defect in Jira
+-Difference in actual and expected result in a task
+
+What is task
+-work which you have to do
+
+what is story point
+-Estimate of time taken to complte a task 
+
+What is Agile
+-Process of working in a project by breaking it into smaller paerts and working on it
+
+difference between agile and waterfall
+- In waterfall each phase is done one by one
+like from requirements gathering to coding 
+and in agile each requirement is given in small segments , all team members complete that requirement and then 
+other requirement is started
+
