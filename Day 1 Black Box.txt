@@ -1,0 +1,86 @@
+Type of Black Box Testing:
+This Testing done by Tester
+ 
+   Smoke Testing:Basic Functionality working as per expected or not
+Functional Testing:Text field,Button,Checkbox,radio button,drop down everything is working asper requirement or not
+Integration Testing:integration between two modules
+System Testing:E2E 	testing
+ 
+Internal Business user (Business Analyst)
+Acceptance Testing or UAT testing:
+ 
+Alpha Testing:Alpha testing will be done the withing organization(Hexaware)
+ 
+ 
+Beta Testing:Once product delivered to the customer,Beta testing will be performed by real time business user(Amazon).
+
+
+8 to 12
+ 
+Equivalence:
+0--7|8--12|12>
+ 
+Boundary Value:
+A=8
+B=12
+ 
+A-1,A,B,B+1
+7(Invalid),8(Valid),12(Valid),13(Invalid)
+
+
+
+Equivalence Partitioning
+
+Boundary Value Analysis
+
+Error guessing
+------------------------------
+What is Testing by 
+
+
+What is Testing
+Valid an dInvalid by 
+
+
+Valid an dInvalid
+Objective of Testing by 
+
+
+Objective of Testing
+Test Scenario by 
+
+
+Test Scenario
+Testcase by 
+
+
+Testcase
+Expected Result by 
+
+
+Expected Result
+Actual Result by 
+
+
+Actual Result
+Error,Bug,fault,Failure by 
+
+
+Error,Bug,fault,Failure
+White boc testing by 
+
+
+White boc testing
+Black bo testing by 
+
+
+Black bo testing
+Black box testing types(Smoke,functional,in... by 
+
+
+Black box testing types(Smoke,functional,integration,system,e2e,accpetance,alpha,beta)
+Black box testing techniques(Error gyuessin... by 
+
+
+Black box testing techniques(Error gyuessing,Equivalence,Boundary Value,state transtion,Decision table)
+has context menu
